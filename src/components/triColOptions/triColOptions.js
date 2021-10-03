@@ -28,6 +28,8 @@ export const OptionsImg = styled.img`
   height: 300px;
   min-width: 300px;
   max-width: 100%;
+  object-fit: contain;
+
 `;
 
 export const OptionsHeading = styled.h1`
