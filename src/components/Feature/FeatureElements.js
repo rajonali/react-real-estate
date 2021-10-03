@@ -7,7 +7,7 @@ export const FeatureContainer = styled.div`
   background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1)),
     url(${herohouse});
   background-position: bottom;
-
+  background-size: contain;
   height: 100vh;
   max-height: 500px;
   background-size: cover;
