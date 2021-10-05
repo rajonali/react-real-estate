@@ -22,8 +22,14 @@ const Products = ({ heading, data }) => {
             <ProductCard key={index}>
               <ProductImg src={product.img} />
               <ProductInfo>
-                <ProductTitle>{product.addr}</ProductTitle>
+                <p>{product.type}</p>
                 <ProductPrice>{product.price}</ProductPrice>
+                <p>{product.beds} beds</p>
+                <p>{product.baths} baths</p>
+                <p>{product.sqft} sqft.</p>
+                <ProductTitle>{product.addr}</ProductTitle>
+
+
                 <ProductButton>{product.button}</ProductButton>
               </ProductInfo>
             </ProductCard>

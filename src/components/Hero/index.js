@@ -2,13 +2,26 @@ import React, { useState } from 'react';
 import Navbar from '../Navbar';
 import Sidebar from '../Sidebar';
 import {
+HeroSearchButton,
+  QuickListingsButton,
+  QuickListings,
   HeroContainer,
+  HeroInput,
   HeroContent,
   HeroItems,
   HeroH1,
   HeroP,
-  HeroBtn
+  HeroBtn,
+  searchbar,
+  searchlabel,
+  searchqueryinput,
+  searchquerysubmit,
+  searchwrapper,
+  searchbutton,
 } from './HeroElements';
+
+
+import { FaSearch } from 'react-icons/fa';
 
 const Hero = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,7 +38,22 @@ const Hero = () => {
         <HeroItems>
           <HeroH1>Change Starts Here</HeroH1>
           <HeroP>Let us help you start the next chapter</HeroP>
-          <HeroBtn>Find A Home</HeroBtn>
+
+          
+
+
+
+
+
+          <div style={{ display:'flex', flexDirection:'row', justifyContent:'center', alignItems:'center', height:'auto'}}>
+          <HeroInput type="text" placeholder="Baton Rouge, LA" />
+          <HeroSearchButton type="submit"><FaSearch/></HeroSearchButton>
+          </div>
+          <QuickListings>
+          <QuickListingsButton>Buy</QuickListingsButton>
+          <QuickListingsButton>Sell</QuickListingsButton>
+          <QuickListingsButton>Rent</QuickListingsButton>
+          </QuickListings>
         </HeroItems>
       </HeroContent>
     </HeroContainer>

@@ -10,6 +10,7 @@ import TriColOptions from './components/triColOptions';
 import {listingData} from './components/triColOptions/data'
 import FeaturedListings from './components/FeaturedListings'
 import {listingData2} from './components/FeaturedListings/data'
+import DualColOptions from './components/DualColOptions';
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
       <TriColOptions data={listingData} heading="Whether you’re buying, selling or renting, we can help you move forward." />
       <Feature />
       <FeaturedListings data={listingData2} heading="Featured Listings" />
-
+      <DualColOptions />
       <Footer />
     </Router>
   );

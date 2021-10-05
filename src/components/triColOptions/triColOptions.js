@@ -2,10 +2,11 @@ import styled from 'styled-components';
 
 export const OptionsContainer = styled.div`
   /* width: 100vw; */
-  min-height: 100vh;
+  min-height: 2vh;
   padding: 5rem calc((100vw - 1300px) / 2);
   background: #fff;
   color: #000;
+  
 `;
 
 export const OptionsWrapper = styled.div`

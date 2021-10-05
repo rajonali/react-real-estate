@@ -9,6 +9,7 @@ export const HeroContainer = styled.div`
   background-size: cover;
 `;
 
+
 export const HeroContent = styled.div`
   height: calc(100vh - 80px);
   max-height: 100%;
@@ -46,6 +47,64 @@ export const HeroP = styled.p`
   margin-bottom: 2rem;
 `;
 
+export const HeroInput = styled.input`
+  margin-bottom:30px;
+  height:40px;
+  align-items: center;
+  justify-content:center;
+  font-size:20px;
+  padding:0;  
+  margin:0;
+  padding-left:10px;
+  width:500px;
+`;
+
+export const QuickListings = styled.div`
+display:flex;
+flex-direction:row;
+
+
+`;
+
+
+export const HeroSearchButton = styled.button`
+font-size:25px;
+margin:0;
+border:0;
+background-color:#e9ba23;
+border-radius: 0 10px 10px 0;
+margin:0px;
+padding:4px;
+align-items: center;
+justify-content:center;
+`;
+
+
+export const QuickListingsButton = styled.button`
+margin-top:20px;
+font-size: 1.4rem;
+border:none;
+border-right: 1px solid rgba(0,0,0,0.2);
+padding: 1rem 4rem;
+
+background: rgba(11,110,250,0.9);
+color: #fff;
+transition: 0.2s ease-out;
+
+&:last-child {
+  border:none;
+}
+
+
+&:hover {
+  background: #ffc500;
+  transition: 0.2s ease-out;
+  cursor: pointer;
+  color: #000;
+}
+
+`;
+
 export const HeroBtn = styled.button`
   font-size: 1.4rem;
   padding: 1rem 4rem;
@@ -61,3 +120,6 @@ export const HeroBtn = styled.button`
     color: #000;
   }
 `;
+
+
+
