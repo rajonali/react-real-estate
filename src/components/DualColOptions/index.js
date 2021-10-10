@@ -25,28 +25,28 @@ const DualColOptions = ({ heading, data }) => {
     </Info1>
 </FirstCol>
 <SecondCol>
-<Info2><h3>
-    
-Get Local Info
-
-    
-    </h3>
-
-    <p>
-
-    Does it have pet-friendly rentals? What are the crime rates? How are the schools? Get important local information on the area you're most interested in.
-
-
-
-    </p>
-    
-    <input />
-    </Info2>
     <Info1>
 
     <Img2 src={whitefam} alt="fam" />
     </Info1>
-
+    <Info2><h3>
+    
+    Get Local Info
+    
+        
+        </h3>
+    
+        <p>
+    
+        Does it have pet-friendly rentals? What are the crime rates? How are the schools? Get important local information on the area you're most interested in.
+    
+    
+    
+        </p>
+        
+        <input />
+        </Info2>
+    
     </SecondCol>
       </DualColOptionsWrapper>
   );

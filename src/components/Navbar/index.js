@@ -3,7 +3,6 @@ import { Nav, NavLink, NavIcon, Bars } from './NavbarElements';
 
 const Navbar = ({ toggle }) => {
   return (
-    <>
       <Nav>
         <NavLink to='/'>Ali & Associates</NavLink>
         <NavIcon onClick={toggle}>
@@ -11,7 +10,6 @@ const Navbar = ({ toggle }) => {
           <Bars />
         </NavIcon>
       </Nav>
-    </>
   );
 };
 

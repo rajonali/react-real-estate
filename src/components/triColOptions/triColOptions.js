@@ -26,7 +26,6 @@ export const OptionsCard = styled.div`
 `;
 
 export const OptionsImg = styled.img`
-  height: 300px;
   min-width: 300px;
   max-width: 100%;
   object-fit: contain;
@@ -40,7 +39,7 @@ export const OptionsHeading = styled.h1`
 `;
 
 export const OptionsTitle = styled.h2`
-  font-weight: 400;
+  font-weight: 700;
   font-size: 1.5rem;
   color:black;
 `;
@@ -51,7 +50,7 @@ export const OptionsInfo = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
+  padding: 1rem;
   text-align: center;
 `;
 
@@ -68,8 +67,8 @@ export const OptionsButton = styled.button`
   font-size: 1rem;
   padding: 1rem 4rem;
   border: none;
-  background: #e31837;
-  color: #fff;
+  background: rgba(0,0,0,0.1);
+  color: #000;
   transition: 0.2 ease-out;
 
   &:hover {

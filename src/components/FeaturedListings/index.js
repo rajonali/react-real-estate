@@ -9,7 +9,8 @@ import {
   ProductInfo,
   ProductDesc,
   ProductPrice,
-  ProductButton
+  ProductButton,
+  TriColInfo
 } from './FeaturedListings';
 
 const Products = ({ heading, data }) => {
@@ -24,13 +25,15 @@ const Products = ({ heading, data }) => {
               <ProductInfo>
                 <p>{product.type}</p>
                 <ProductPrice>{product.price}</ProductPrice>
+                <TriColInfo>
                 <p>{product.beds} beds</p>
                 <p>{product.baths} baths</p>
                 <p>{product.sqft} sqft.</p>
+                </TriColInfo>
+
                 <ProductTitle>{product.addr}</ProductTitle>
 
 
-                <ProductButton>{product.button}</ProductButton>
               </ProductInfo>
             </ProductCard>
           );

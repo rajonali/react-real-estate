@@ -19,33 +19,47 @@ export const ProductCard = styled.div`
   margin: 0 2rem;
   line-height: 2;
   width: 300px;
-`;
+  display:flex;
+  flex-direction:column;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  border-radius: 5px;
+
+  `;
 
 export const ProductImg = styled.img`
   height: 300px;
   min-width: 300px;
   max-width: 100%;
-  box-shadow: 8px 8px #fdc500;
 `;
 
 export const ProductsHeading = styled.h1`
   font-size: clamp(2rem, 2.5vw, 3rem);
   text-align: center;
   margin-bottom: 5rem;
+  
 `;
 
 export const ProductTitle = styled.h2`
   font-weight: 400;
   font-size: 1.5rem;
+  text-align:center;
+  
 `;
 
 export const ProductInfo = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
-  text-align: center;
+  padding: 1rem;
+  
+  
+`;
+
+export const TriColInfo = styled.div`
+  display:flex;
+  flex-direction: row;
+  flex:1;
+  justify-content:space-around;
+
 `;
 
 export const ProductDesc = styled.p`

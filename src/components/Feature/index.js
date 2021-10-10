@@ -5,8 +5,8 @@ const Feature = () => {
   return (
     <FeatureContainer>
       <h1>Selling A Home?</h1>
-      <p>Truffle alfredo sauce topped with 24 carat gold dust.</p>
-      <FeatureButton>Order Now</FeatureButton>
+      <p>Let us help you get the most out of it!</p>
+      <FeatureButton>Create A Listing</FeatureButton>
     </FeatureContainer>
   );
 };

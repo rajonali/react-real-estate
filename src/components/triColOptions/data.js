@@ -10,7 +10,7 @@ export const listingData = [
   {
     img: buyahouse,
     alt: 'Buy',
-    title: 'Buy A Home.',
+    title: 'Buy A Home',
     desc: 'Find your place with an immersive photo experience and the most listings, including things you won’t find anywhere else.',
     button: 'Search homes'
   },
@@ -19,7 +19,7 @@ export const listingData = [
     alt: 'Sell',
     title: 'Sell A Home',
     desc: 'Find your place with an immersive photo experience and the most listings, including things you won’t find anywhere else.',
-    button: 'See your options'
+    button: 'Add Listing'
   },  {
     img: rentahouse,
     alt: 'Rent',

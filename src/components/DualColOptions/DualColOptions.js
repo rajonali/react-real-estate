@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 export const DualColOptionsWrapper = styled.div`
   margin: 0 2rem;
-  padding:100px;
+  padding:75px;
 
   line-height: 2;
 display:flex;
@@ -15,7 +15,7 @@ export const FirstCol = styled.div`
 display:flex;
 height:100%;
 flex:1;
-flex-direction:column;
+flex-direction:row;
 margin:0 !important;
 padding:0 !important;
 `;
@@ -48,25 +48,27 @@ display: block;
 
 
 export const SecondCol = styled.div`
-flex:1;
 display:flex;
 height:100%;
-flex-direction:column;
+
+flex:1;
+flex-direction:row;
 margin:0 !important;
 padding:0 !important;
 `;
 
 
 export const Info1 = styled.div`
-display:flex;
 flex:1;
-flex-direction:column;
-justify-content:center;
+display:flex;
 display: inline-block;
 
-align-items:center;
+flex-direction:column;
 height:100%;
-text-align:center;
+margin-left:2rem;
+justify-content:center;
+align-items:center;
+
 
 `;
 
@@ -77,8 +79,8 @@ display:flex;
 display: inline-block;
 
 flex-direction:column;
-text-align:center;
 height:100%;
+margin-left:2rem;
 justify-content:center;
 align-items:center;
 

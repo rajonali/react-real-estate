@@ -6,7 +6,8 @@ export const Nav = styled.nav`
   background: transparent;
   height: 80px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  padding:20px;
   font-weight: 700;
 `;
 
