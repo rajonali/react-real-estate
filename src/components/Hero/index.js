@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import Navbar from '../Navbar';
 import Sidebar from '../Sidebar';
 import {
@@ -20,6 +20,7 @@ HeroSearchButton,
   searchbutton,
 } from './HeroElements';
 
+import UserContext from './UserContext';
 
 import { FaSearch } from 'react-icons/fa';
 
@@ -29,6 +30,7 @@ const Hero = () => {
   const toggle = () => {
     setIsOpen(!isOpen);
   };
+
 
   return (
     <HeroContainer>

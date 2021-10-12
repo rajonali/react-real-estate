@@ -1,9 +1,11 @@
 import React, { useState, useEffect} from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import Hero from './components/Hero';
 import Products from './components/Products';
 import { productData, productDataTwo } from './components/Products/data';
 import { Switch, Route } from "react-router-dom";
+
+
 import Home from './pages/Home'
 import Listings from './pages/Listings'
 import Error from './pages/Error'
@@ -21,6 +23,11 @@ import {Auth, Hub} from 'aws-amplify';
 
 
 
+import UserContext from './UserContext';
+import Router from './Router';
+
+
+
 const initialFormState = {
   username:'',
   password:'',
@@ -33,31 +40,57 @@ const initialFormState = {
 
 function App() {
 
-  const [formState, updateFormState] = useState(initialFormState)
+  const [currentUser, setCurrentUser] = useState({});
+  const [isLoaded, setIsLoaded] = useState({});
 
-  function onChange(e) {
-    e.persist()
-    updateFormState(() => ({ ...formState, [e.target.name]: e.target.value}))
+
+  useEffect(() => {
+    updateCurrentUser();
+    console.log(currentUser);
+    listen();
+  }, [])
+  
+  
+  function listen() {
+    Hub.listen('auth', (data) => {
+      if (data.payload.event === 'signIn') {
+        updateCurrentUser();
+      }
+      if (data.payload.event === 'signOut') {
+        updateCurrentUser();
+      }
+    });
   }
 
 
 
- 
-  const { formType } = formState
-  
-  return (  
-
-    <Router>
-
-<AmplifySignOut />
-
-              <Route exact path="/" component={Home} />
-              <PrivateRoute exact path="/listings/" component={Listings} />
-              <Route exact path="/listings/:slug" component={SingleListing} />
-
-     
-    </Router>
+  async function updateCurrentUser(user = null) {
+    if (user) {
+      console.log(user);
+      setCurrentUser(user);
+      return
+    }
+    try {
+      const user = await Auth.currentAuthenticatedUser()
+      setCurrentUser(user);
+      setIsLoaded(true);
+    } catch (err) {
+      setCurrentUser(null);
+      setIsLoaded(true);
+    }
+  }
+  return (
+    <UserContext.Provider value={{
+      user: currentUser,
+      updateCurrentUser: updateCurrentUser,
+      isLoaded: isLoaded
+    }}>
+      <Router />
+    </UserContext.Provider>
   );
 }
+
+
+
 
 export default App;

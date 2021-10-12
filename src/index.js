@@ -6,6 +6,11 @@ import reportWebVitals from './reportWebVitals';
 import { ListingProvider } from "./context";
 import { BrowserRouter } from "react-router-dom";
 
+import config from './aws-exports';
+import Amplify from 'aws-amplify';
+Amplify.configure(config);
+
+
 ReactDOM.render(
   <ListingProvider>
     <BrowserRouter>
