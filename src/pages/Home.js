@@ -12,7 +12,6 @@ import Footer from '../components/Footer';
 import {listingData} from '../components/triColOptions/data'
 import {listingData2} from '../components/FeaturedListings/data'
 
-
 const home = () => {
   return (
     <>

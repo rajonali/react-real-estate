@@ -18,6 +18,7 @@ const TriColOptions = ({data, heading}) => {
   return (
 <OptionsContainer>
 
+
 <OptionsHeading>{heading}</OptionsHeading>
       <OptionsWrapper>
 

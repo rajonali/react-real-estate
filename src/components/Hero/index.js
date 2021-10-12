@@ -35,6 +35,8 @@ const Hero = () => {
       <Navbar toggle={toggle} />
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <HeroContent>
+
+        
         <HeroItems>
           <HeroH1>Change Starts Here</HeroH1>
           <HeroP>Let us help you start the next chapter</HeroP>
