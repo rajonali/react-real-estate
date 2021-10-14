@@ -18,6 +18,7 @@ const home = () => {
     
  <GlobalStyle />
  <Hero />
+ 
  <TriColOptions data={listingData} heading="Whether you’re buying, selling or renting, we can help you move forward." />
  <Feature />
  <FeaturedListings data={listingData2} heading="Featured Listings" />

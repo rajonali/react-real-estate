@@ -6,13 +6,11 @@ import { Link } from "react-router-dom";
 const Listings = () => {
   return (
     <>
-      <Hero hero="roomsHero">
         <Banner title="our rooms" subtitle="subtitle">
           <Link to="/" className="btn-primary">
             return home
           </Link>
         </Banner>
-      </Hero>
        <ListingsContainer /> 
     </>
   );

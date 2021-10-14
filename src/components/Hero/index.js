@@ -20,7 +20,6 @@ HeroSearchButton,
   searchbutton,
 } from './HeroElements';
 
-import UserContext from './UserContext';
 
 import { FaSearch } from 'react-icons/fa';
 
@@ -34,7 +33,6 @@ const Hero = () => {
 
   return (
     <HeroContainer>
-      <Navbar toggle={toggle} />
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <HeroContent>
 

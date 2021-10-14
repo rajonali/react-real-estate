@@ -30,7 +30,7 @@ export default function Router() {
       <Navbar toggle={toggle} />
       <Sidebar isOpen={isOpen} toggle={toggle} />
 
-      <div className={containerStyle}>
+      <div>
         <Switch>
           <Route path="/" component={Home} exact />
           <ProtectedRoute path="/listings/" exact component={Listings} />
@@ -53,9 +53,6 @@ const linkTitleStyle = css`
   text-decoration: none;
 `
 
-const containerStyle = css`
-  padding: 0px 30px;
-`
 
 const linkStyle = css`
   color: white;
