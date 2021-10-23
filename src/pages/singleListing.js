@@ -57,13 +57,13 @@ export default class SingleListing extends Component {
             </Link>
           </Banner>
         </StyledHero>
-        <section className="single-room">
-          <div className="single-room-images">
+        <section className="single-listing">
+          <div className="single-listing-images">
             {defaultImages.map((item, index) => (
               <img key={index} src={item} alt={name} />
             ))}
           </div>
-          <div className="single-room-info">
+          <div className="single-listing-info">
             <article className="desc">
               <h3>details</h3>
               <p>{description}</p>
@@ -81,7 +81,7 @@ export default class SingleListing extends Component {
             </article>
           </div>
         </section>
-        <section className="room-extras">
+        <section className="listing-extras">
           <h6>extras </h6>
           <ul className="extras">
             {extras.map((item, index) => (

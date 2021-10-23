@@ -10,10 +10,10 @@ function ListingContainer({ context }) {
     return <Loading />;
   }
   return (
-    <>
+    <div>
       <ListingsFilter listings={listings} />
       <ListingsList listings={sortedListings} />
-    </>
+    </div>
   );
 }
 
