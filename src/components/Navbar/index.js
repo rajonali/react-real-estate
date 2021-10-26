@@ -5,9 +5,10 @@ import { Nav, NavLink, NavIcon, Bars } from './NavbarElements';
 const Navbar = ({ toggle }) => {
   return (
       <Nav>
-        <NavLink to='/'>Ali & Associates</NavLink>
+        <NavLink to='/'>tinybnb</NavLink>
+
         <NavIcon onClick={toggle}>
-          <p>Menu</p>
+        <div>  <p>Menu</p></div>
           <Bars />
         </NavIcon>
       </Nav>

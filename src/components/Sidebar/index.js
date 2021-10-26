@@ -18,6 +18,8 @@ import {
 Link
 } from 'react-router-dom'
 
+import { Button } from 'semantic-ui-react'
+
 
 
 
@@ -38,6 +40,10 @@ const Sidebar = ({ isOpen, toggle }) => {
   const isLoaded = context.isLoaded
   
 
+  const signOut = () => {
+    Auth.signOut();
+  }
+
 
   return (
     <SidebarContainer isOpen={isOpen} onClick={toggle}>
@@ -45,17 +51,28 @@ const Sidebar = ({ isOpen, toggle }) => {
         <CloseIcon />
       </Icon>
       <SidebarMenu>
-        <SidebarLink to='/listings'>Buy A Home</SidebarLink>
-        <SidebarLink to='/'>Sell A Home</SidebarLink>
-        <SidebarLink to='/'>Rent A Home</SidebarLink>
+
+
+      {
+isAuthenticated ? 
+
+(
+<SidebarLink to='/'>My Profile</SidebarLink>
+)
+: (<span />)
+}
+
+        <SidebarLink to='/listings'>See All Listings</SidebarLink>
+        <SidebarLink to='/'>Become a Host</SidebarLink>
+
+
+      
+      
       </SidebarMenu>
-      <SideBtnWrap>
-    
-        <SidebarRoute to='/'>Contact Us</SidebarRoute>
 
-      </SideBtnWrap>
-      {isAuthenticated ? (<AmplifySignOut />) : (<button><Link to="/profile">Login</Link></button>)}
-
+<div style={{ display:'flex', flex:1, justifyContent:'center', alignItems:'center'}}>
+      {isAuthenticated ? (<Button light outline border="0" onClick={() => signOut()}><Link to="/">Sign Out</Link></Button>) : (<Button light outline border="0" style={{width:'50%'}}><Link to="/profile">Login</Link></Button>)}
+</div>
     </SidebarContainer>
   );
 };

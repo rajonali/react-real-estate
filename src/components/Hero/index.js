@@ -9,7 +9,7 @@ HeroSearchButton,
   HeroInput,
   HeroContent,
   HeroItems,
-  HeroH1,
+  HeroH2,
   HeroP,
   HeroBtn,
   searchbar,
@@ -21,8 +21,19 @@ HeroSearchButton,
 } from './HeroElements';
 
 
+import { Button, Form, Checkbox, Dropdown, Menu } from 'semantic-ui-react'
+import _ from 'lodash'
+
+
 import { FaSearch } from 'react-icons/fa';
 
+import faker from 'faker'
+
+const options = [
+  { key: 1, text: 'Choice 1', value: 1 },
+  { key: 2, text: 'Choice 2', value: 2 },
+  { key: 3, text: 'Choice 3', value: 3 },
+]
 const Hero = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -38,24 +49,38 @@ const Hero = () => {
 
         
         <HeroItems>
-          <HeroH1>Change Starts Here</HeroH1>
-          <HeroP>Let us help you start the next chapter</HeroP>
+          <HeroH2>Find your next tiny getaway</HeroH2>
+          <h3>Discover entire homes and private rooms perfect for any trip.</h3>
+
+        
+
+
+          <Form>
+          <Form.Group fluid widths='equal'>
+          <Form.Input fluid style={{width:'500px',}} label='Location' placeholder='Baton Rouge, LA' />
+        </Form.Group>
+
+        <Form.Group fluid>
+          <Form.Input fluid label='Check-In' style={{width:'200px',}} placeholder='Check-In' />
+          <Form.Input fluid label='Check-Out' style={{width:'200px',}} placeholder='Check-Out' />
+
+        </Form.Group>
+        
+        <Form.Group fluid style={{color:'black'}}>
+        <Menu compact>
+
+        <Dropdown placeholder='Adults' fluid multiple selection options={options} />
+        </Menu>
+        <Menu compact>
+        <Dropdown placeholder='Children' fluid multiple selection options={options} />
+</Menu>
+          </Form.Group>
+        <Button><FaSearch/> Search</Button>
+      </Form>
+
 
           
-
-
-
-
-
-          <div style={{ display:'flex', flexDirection:'row', justifyContent:'center', alignItems:'center', height:'auto'}}>
-          <HeroInput type="text" placeholder="Baton Rouge, LA" />
-          <HeroSearchButton type="submit"><FaSearch/></HeroSearchButton>
-          </div>
-          <QuickListings>
-          <QuickListingsButton>Buy</QuickListingsButton>
-          <QuickListingsButton>Sell</QuickListingsButton>
-          <QuickListingsButton>Rent</QuickListingsButton>
-          </QuickListings>
+          
         </HeroItems>
       </HeroContent>
     </HeroContainer>

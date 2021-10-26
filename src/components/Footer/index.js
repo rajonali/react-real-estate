@@ -16,13 +16,17 @@ import {
   SocialIconLink
 } from './FooterElements';
 
+
+
+
+
 const Footer = () => {
   return (
     <FooterContainer>
       <FooterWrap>
         <SocialMedia>
           <SocialMediaWrap>
-            <SocialLogo to='/'>Ali & Associates</SocialLogo>
+            <SocialLogo to='/'>tinybnb</SocialLogo>
             <SocialIcons>
               <SocialIconLink href='/' target='_blank' aria-label='Facebook'>
                 <FaFacebook />

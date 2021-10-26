@@ -1,6 +1,5 @@
 import styled from 'styled-components';
-import FeaturePic from '../../images/featured3.jpg';
-import herohouse from '../../images/herohouse.png';
+import herohouse from '../../images/hosting.png';
 
 
 export const FeatureContainer = styled.div`

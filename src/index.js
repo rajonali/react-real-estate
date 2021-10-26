@@ -8,12 +8,16 @@ import { BrowserRouter } from "react-router-dom";
 
 import config from './aws-exports';
 import Amplify from 'aws-amplify';
+
+import 'semantic-ui-css/semantic.min.css'
+
 Amplify.configure(config);
+
 
 
 ReactDOM.render(
   <ListingProvider>
-    <BrowserRouter>
+  <BrowserRouter>
       <App />
     </BrowserRouter>
   </ListingProvider>
