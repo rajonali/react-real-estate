@@ -41,9 +41,13 @@ export const HeroItems = styled.div`
 
 export const HeroH2 = styled.h2`
   font-size: clamp(2rem, 10vw, 4rem);
-  margin-bottom: 1rem;
-  letter-spacing: 3px;
-  font-weight:bold;
+  letter-spacing: 2px;
+  font-weight: 500px;
+  color: #6b46c1;
+  background-color:rgba(255,255,255,0.4);
+  padding:1rem;
+
+
 `;
 
 export const HeroP = styled.p`

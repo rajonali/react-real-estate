@@ -13,10 +13,11 @@ export const FeatureContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+
   color: #fff;
   text-align: center;
-  padding: 0 1rem;
+  padding: 0 5rem;
 
   h1 {
     font-size: clamp(3rem, 5vw, 5rem);

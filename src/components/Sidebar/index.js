@@ -57,7 +57,7 @@ const Sidebar = ({ isOpen, toggle }) => {
 isAuthenticated ? 
 
 (
-<SidebarLink to='/'>My Profile</SidebarLink>
+<SidebarLink to='/profile'>My Profile</SidebarLink>
 )
 : (<span />)
 }

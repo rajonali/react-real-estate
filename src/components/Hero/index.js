@@ -66,15 +66,6 @@ const Hero = () => {
 
         </Form.Group>
         
-        <Form.Group fluid style={{color:'black'}}>
-        <Menu compact>
-
-        <Dropdown placeholder='Adults' fluid multiple selection options={options} />
-        </Menu>
-        <Menu compact>
-        <Dropdown placeholder='Children' fluid multiple selection options={options} />
-</Menu>
-          </Form.Group>
         <Button><FaSearch/> Search</Button>
       </Form>
 
