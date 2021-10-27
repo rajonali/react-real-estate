@@ -1,7 +1,11 @@
 import React, { Component } from "react";
 import items from "./data";
-/*import Client from "./Contentful";*/
+import Client from "./Contentful";
 
+
+Client.getEntries({
+  content_type:'beachResortRoom'
+}).then(response => console.log(response.items))
 const ListingContext = React.createContext();
 
 export default class ListingProvider extends Component {
@@ -22,49 +26,37 @@ export default class ListingProvider extends Component {
     pets: false
   };
 
-  // getData = async () => {
-  //   try {
-  //     let response = await Client.getEntries({
-  //       content_type: "beachResortRoom"
-  //     });
-  //     let rooms = this.formatData(response.items);
+   getData = async () => {
+     try {
+       let response = await Client.getEntries({
+         content_type: "beachResortRoom"
+       });
 
-  //     let featuredRooms = rooms.filter(room => room.featured === true);
-  //     //
-  //     let maxPrice = Math.max(...rooms.map(item => item.price));
-  //     let maxSize = Math.max(...rooms.map(item => item.size));
-  //     this.setState({
-  //       rooms,
-  //       featuredRooms,
-  //       sortedRooms: rooms,
-  //       loading: false,
-  //       //
-  //       price: maxPrice,
-  //       maxPrice,
-  //       maxSize
-  //     });
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // };
+       console.log(response.items)
+       let listings = this.formatData(response.items);
+       console.log(listings);
+       let featuredListings = listings.filter(room => listings.featured === true);
+       //
+       let maxPrice = Math.max(...listings.map(item => item.price));
+       let maxSize = Math.max(...listings.map(item => item.size));
+       this.setState({
+         listings,
+         featuredListings,
+         sortedListings: listings,
+         loading: false,
+         //
+         price: maxPrice,
+         maxPrice,
+         maxSize
+       });
+     } catch (error) {
+       console.log(error);
+     }
+   };
 
   componentDidMount() {
-    // this.getData();
-    let listings = this.formatData(items);
-    let featuredListings = listings.filter(room => listings.featured === true);
-    //
-    let maxPrice = Math.max(...listings.map(item => item.price));
-    let maxSize = Math.max(...listings.map(item => item.size));
-    this.setState({
-      listings,
-      featuredListings,
-      sortedListings: listings,
-      loading: false,
-      //
-      price: maxPrice,
-      maxPrice,
-      maxSize
-    });
+    this.getData();
+   
   }
 
   formatData(items) {

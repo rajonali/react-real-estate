@@ -43,7 +43,7 @@ export const HeroH2 = styled.h2`
   font-size: clamp(2rem, 10vw, 4rem);
   letter-spacing: 2px;
   font-weight: 500px;
-  color: #6b46c1;
+  color: rgba(0,0,0,.7);
   background-color:rgba(255,255,255,0.4);
   padding:1rem;
 
