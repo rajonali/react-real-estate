@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { css } from '@emotion/css';
 import theme from './theme';
 import { Auth } from 'aws-amplify';
+import ProfileContainer from './pages/ProfileContainer';
 
 const intitialFormState = {
   username: '',
@@ -162,9 +163,11 @@ export default function Profile() {
         formType === 'signedIn' && (
           <div className={profileContainerStyle}>
             <h1>Hello, {user.username}</h1>
-            <button onClick={signOut} className={buttonStyle}>
-              Sign Out
-            </button>
+
+            <ProfileContainer />
+
+              
+           
           </div>
         )
       }
