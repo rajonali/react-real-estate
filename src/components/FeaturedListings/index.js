@@ -13,34 +13,23 @@ import {
   TriColInfo
 } from './FeaturedListings';
 
-const Products = ({ heading, data }) => {
+import { withListingConsumer } from "../../context";
+import ListingsList from "../../components/ListingsList";
+
+
+
+const Products = ({ heading, data, context }) => {
+  const { loading, sortedListings, listings } = context;
+
+  
   return (
     <ProductsContainer>
       <ProductsHeading>{heading}</ProductsHeading>
       <ProductWrapper>
-        {data.map((product, index) => {
-          return (
-            <ProductCard key={index}>
-              <ProductImg src={product.img} />
-              <ProductInfo>
-                <p>{product.type}</p>
-                <ProductPrice>{product.price}</ProductPrice>
-                <TriColInfo>
-                <p>{product.beds} beds</p>
-                <p>{product.baths} baths</p>
-                <p>{product.sqft} sqft.</p>
-                </TriColInfo>
-
-                <ProductTitle>{product.addr}</ProductTitle>
-
-
-              </ProductInfo>
-            </ProductCard>
-          );
-        })}
+      <ListingsList listings={sortedListings} />
       </ProductWrapper>
     </ProductsContainer>
   );
 };
 
-export default Products;
+export default withListingConsumer(Products);
